@@ -1,6 +1,9 @@
 -module(lazy2).
 -compile([export_all]).
 
+% Unsuccessful experiement to use a hash of an 
+% expression as index in a lookup table/ETS table.
+
 -define(cons(X,Xs,Tab), begin ets:insert(Tab, {?ref(X,Xs), {thunk, fun () -> {X,Xs} end}}), 
                               io:format("done cons insert~n"), 
                               {ref,?ref(X,Xs)} end).
