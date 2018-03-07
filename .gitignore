@@ -1,3 +1,4 @@
 *.beam
 foo.erl
 *.key
+stuff
