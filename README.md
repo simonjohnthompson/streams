@@ -1,7 +1,7 @@
 # Erlang: the power of functional programming
 Functional programming in Erlang, including streams, lazy evaluation and dependent types.
 
-Code for the presentation at [Erlang/Elixir Factory, Buenos Aires](http://www.erlang-factory.com/eflba2017). Slides in **EFBA.pdf**.
+Code for the presentation at [Erlang/Elixir Factory, Buenos Aires, 2017](http://www.erlang-factory.com/eflba2017) and [CODE BEAM SF 2018](http://www.erlang-factory.com/codebeamsf2018/). Slides in **EFBA.pdf** and **CBSF.pdf**.
 
 ## Notes on different approaches
 
