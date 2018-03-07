@@ -21,7 +21,8 @@
 %                              Tab2 = Tab1#{ 0 => next_ref(Tab1)+1 },
 %                              {{ref,Ref}, Tab2} end).
 
--define(cons(X,F,Tab), begin {{ref,next_ref(Tab)}, Tab#{next_ref(Tab) => {X, {thunk, F}}, 0 => next_ref(Tab)+1}} end).
+-define(cons(X,F,Tab), begin {{ref,next_ref(Tab)}, 
+                              Tab#{next_ref(Tab) => {X, {thunk, F}}, 0 => next_ref(Tab)+1}} end).
 
 
 % Get the next free cell, assuming that value stored in location 0 
@@ -83,7 +84,9 @@ addOne(Xs,Tab) ->
 
 fibsC(Tab) ->
   This = next_ref(Tab),
-  ?cons(0, fun(T) -> ?cons(1, fun(S) -> begin {Tl,S1} = tail({ref,This},S), addZip({ref,This},Tl,S1) end end, T)  end, Tab).
+  ?cons(0, fun(T) -> 
+        ?cons(1, fun(S) -> begin {Tl,S1} = tail({ref,This},S), 
+                                 addZip({ref,This},Tl,S1) end end, T)  end, Tab).
 
 % Add two lists together, elementwise.
 
