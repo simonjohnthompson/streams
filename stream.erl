@@ -99,6 +99,13 @@ ps(Xs,N) ->
   io:format("~w~n",[head(Xs)]),
 ps(tail(Xs),N-1).
 
+ss(_Xs,0) -> 
+    io:format("~n");
+
+ss(Xs,N) ->
+  io:format("~w, ",[head(Xs)]),
+ss(tail(Xs),N-1).
+
 index(N,Ls) ->
   case N of 
     0 -> stream:head(Ls);

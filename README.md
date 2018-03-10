@@ -12,7 +12,7 @@ References are allocated sequentially, with value at key 0 being the current ind
 
 **lazy2.erl** Incomplete experiment in which use a hashed version of an expression as its address in an ETS table. Unsuccessful: hasing appears to be too eager to work.
 
-**lazy.erl** Definitive version of lazy examples which doesn't use ETS tables or other side-effecting constructs. References are stored in a map, and allocated sequentially, with value at key 0 being the current index used. The map is threaded through the computation.
+**lazy3.erl** Definitive version of lazy examples which doesn't use ETS tables or other side-effecting constructs. References are stored in a map, and allocated sequentially, with value at key 0 being the current index used. The map is threaded through the computation.
 
 **memo.erl** Two experiments in memoisation: using ETS and in the data.
 

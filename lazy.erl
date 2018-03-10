@@ -141,4 +141,14 @@ ps(_Xs,0) -> ok;
 ps(Xs,N) ->
   io:format("~w~n",[head(Xs)]),
   ps(tail(Xs),N-1).
+
+% Print the first N values of a stream on one line.    
+
+  ss(_Xs,0) -> 
+      io:format("~n");
+  
+  ss(Xs,N) ->
+    io:format("~w, ",[head(Xs)]),
+  ss(tail(Xs),N-1).
+  
   
