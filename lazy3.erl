@@ -123,7 +123,9 @@ ss(Xs,N,Sto) ->
   {T,Sto1} = tail(Xs,Sto),
   ss(T,N-1,Sto1).
   
-  
+show(Str,N) ->
+  {Stream,Sto} = (Str(start())),
+  ss(Stream,N,Sto). 
 % Calling ps
 
 % 10> {Stream,Sto} = lazy3:onesC(lazy3:start()).
