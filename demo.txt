@@ -1,0 +1,28 @@
+stream
+
+ss for show stream
+:ss
+stream:ss(stream:ones(),100).
+stream:ss(stream:ones(),1000).
+stream:ss(stream:fibs(),15).
+stream:ss(stream:primes(),20).
+
+stream:index(15,stream:primes()).
+
+memo
+
+memo:setup().
+memo:fibM(100000).
+
+lazy
+
+lazy:setup().
+lazy:ss(lazy:fibs(),20).
+lazy:ss(lazy:fibs(),25).
+lazy:ss(lazy:fibsC(),300).
+lazy:ss(lazy:fibsCVar(),300).
+lazy:index(100000,lazy:fibsC()).
+
+lazy3
+
+lazy3:show(fun lazy3:fibsC/1,100).
